@@ -6,19 +6,19 @@ public class ArraySum {
 
 	public static void main(String[] args) throws Throwable {
 		int LENGTH = 1000; // tamanho inicial do vetor
-		int RUNS = 16; // Quantas vezes ir· crescer * 2 ?
+		int RUNS = 15; // Quantas vezes ir√° crescer * 2 ?
 		int qntThreads = 1; // determina a quantidade de threads a serem criadas.
 
 		for (int i = 1; i <= RUNS; i++) {
 			int[] a = createRandomArray(LENGTH);
 
-			// Executa o algoritmo e verifica o tempo de execuÁ„o.
+			// Executa o algoritmo e verifica o tempo de execu√ß√£o.
 			long startTime1 = System.currentTimeMillis();
 			int total = 0;
 			for (int j = 1; j <= 100; j++) {
 
 				if (qntThreads > LENGTH / 2) {
-					throw new RuntimeException("Quantidade in˙til de threads criadas.");
+					throw new RuntimeException("Quantidade in√∫til de threads criadas.");
 				} else {
 
 					if (qntThreads == 1) {
@@ -38,7 +38,7 @@ public class ArraySum {
 			}
 
 			System.out.printf("%10d elements  =>  %6d ms \n", LENGTH, endTime1 - startTime1);
-			LENGTH *= 2; // Duplica o tamanho do vetor para a prÛxima execuÁ„o
+			LENGTH *= 2; // Duplica o tamanho do vetor para a pr√≥xima execu√ß√£o
 		}
 	}
 
@@ -62,7 +62,7 @@ public class ArraySum {
 		leftThread.start();
 		rightThread.start();
 
-		// esperam a execuÁ„o da threads finalizar
+		// esperam a execu√ß√£o da threads finalizar
 		try {
 			leftThread.join();
 			rightThread.join();
@@ -99,7 +99,7 @@ public class ArraySum {
 		return total;
 	}
 
-	// MÈtodo auxiliar para computar a soma dos elementos de uma porÁ„o [min ...
+	// M√©todo auxiliar para computar a soma dos elementos de uma por√ß√£o [min ...
 	// max] do vetor
 	public static int sumRange(int[] a, int min, int max) {
 		int result = 0;
@@ -109,7 +109,7 @@ public class ArraySum {
 		return result;
 	}
 
-	// Preenche o vetor com elementos aleatÛrios.
+	// Preenche o vetor com elementos aleat√≥rios.
 	public static int[] createRandomArray(int length) {
 		int[] a = new int[length];
 		for (int i = 0; i < a.length; i++) {
