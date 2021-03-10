@@ -6,7 +6,7 @@ public class MergeSort {
 
 	public static void main(String[] args) throws Throwable {
 		int LENGTH = 1000; // tamanho do vetor
-		int RUNS = 16; // quantas execuÁıes ser„o testadas?
+		int RUNS = 14; // quantas execu√ß√µes ser√£o testadas?
 
 		for (int i = 1; i <= RUNS; i++) {
 			int[] a = createRandomArray(LENGTH);
@@ -21,7 +21,7 @@ public class MergeSort {
 			}
 
 			System.out.printf("%10d elements  =>  %6d ms \n", LENGTH, endTime1 - startTime1);
-			LENGTH *= 2; // dobra o tamanho do array para a prÛxima execuÁ„o.
+			LENGTH *= 2; // dobra o tamanho do array para a pr√≥xima execu√ß√£o.
 		}
 	}
 
@@ -60,7 +60,7 @@ public class MergeSort {
 
 	/*
 	 * Rearranja os elementos do vetor de forma ordenada usando o algoritmo
-	 * MergeSort. MergeSort È O(N log N) para todas as entradas.
+	 * MergeSort. MergeSort √© O(N log N) para todas as entradas.
 	 */
 	public static void mergeSort(int[] a) {
 		if (a.length >= 2) {
@@ -95,7 +95,7 @@ public class MergeSort {
 		}
 	}
 
-	// Troca os valores entre duas posiÁıes do vetor.
+	// Troca os valores entre duas posi√ß√µes do vetor.
 	public static final void swap(int[] a, int i, int j) {
 		if (i != j) {
 			int temp = a[i];
@@ -113,7 +113,7 @@ public class MergeSort {
 		}
 	}
 
-	// Verifica se o vetor est· completamente ordenado em ordem crescente.
+	// Verifica se o vetor est√° completamente ordenado em ordem crescente.
 	public static boolean isSorted(int[] a) {
 		for (int i = 0; i < a.length - 1; i++) {
 			if (a[i] > a[i + 1]) {
@@ -123,7 +123,7 @@ public class MergeSort {
 		return true;
 	}
 
-	// Cria um vetor de tamanho length e o preenche com valores n„o-negativos
+	// Cria um vetor de tamanho length e o preenche com valores n√£o-negativos
 	// inteiros.
 	public static int[] createRandomArray(int length) {
 		int[] a = new int[length];
@@ -137,9 +137,9 @@ public class MergeSort {
 
 /*
  * A classe Sorter representa uma tarefa que pode ser executada em uma thread
- * Ela realiza a execuÁ„o do MergeSort em um array. A ideia È que o agoritmo
- * paralelo do MergeSort possa criar v·rios "Ordenadores", cada um para um
- * pequeno espaÁo do array. Ao final, uma thread ir· unir as pequenas partes
+ * Ela realiza a execu√ß√£o do MergeSort em um array. A ideia √© que o agoritmo
+ * paralelo do MergeSort possa criar v√°rios "Ordenadores", cada um para um
+ * pequeno espa√ßo do array. Ao final, uma thread ir√° unir as pequenas partes
  * ordenando o vetor todo.
  */
 
