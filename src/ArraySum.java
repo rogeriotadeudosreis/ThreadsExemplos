@@ -6,7 +6,7 @@ public class ArraySum {
 
 	public static void main(String[] args) throws Throwable {
 		int LENGTH = 1000; // tamanho inicial do vetor
-		int RUNS = 16; // Quantas vezes irá crescer * 2 ?
+		int RUNS = 14; // Quantas vezes irá crescer * 2 ?
 		int qntThreads = 1; // determina a quantidade de threads a serem criadas.
 
 		for (int i = 1; i <= RUNS; i++) {
