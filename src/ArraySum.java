@@ -12,13 +12,13 @@ public class ArraySum {
 		for (int i = 1; i <= RUNS; i++) {
 			int[] a = createRandomArray(LENGTH);
 
-			// Executa o algoritmo e verifica o tempo de execução.
+			// Executa o algoritmo e verifica o tempo de execuÃ§Ã£o.
 			long startTime1 = System.currentTimeMillis();
 			int total = 0;
 			for (int j = 1; j <= 100; j++) {
 
 				if (qntThreads > LENGTH / 2) {
-					throw new RuntimeException("Quantidade inútil de threads criadas.");
+					throw new RuntimeException("Quantidade inÃºtil de threads criadas.");
 				} else {
 
 					if (qntThreads == 1) {
@@ -38,7 +38,7 @@ public class ArraySum {
 			}
 
 			System.out.printf("%10d elements  =>  %6d ms \n", LENGTH, endTime1 - startTime1);
-			LENGTH *= 2; // Duplica o tamanho do vetor para a próxima execução
+			LENGTH *= 2; // Duplica o tamanho do vetor para a prÃ³xima execuÃ§Ã£o
 		}
 	}
 
@@ -62,7 +62,7 @@ public class ArraySum {
 		leftThread.start();
 		rightThread.start();
 
-		// esperam a execução da threads finalizar
+		// esperam a execuÃ§Ã£o da threads finalizar
 		try {
 			leftThread.join();
 			rightThread.join();
@@ -99,7 +99,7 @@ public class ArraySum {
 		return total;
 	}
 
-	// Método auxiliar para computar a soma dos elementos de uma porção [min ...
+	// MÃ©todo auxiliar para computar a soma dos elementos de uma porÃ§Ã£o [min ...
 	// max] do vetor
 	public static int sumRange(int[] a, int min, int max) {
 		int result = 0;
@@ -109,7 +109,7 @@ public class ArraySum {
 		return result;
 	}
 
-	// Preenche o vetor com elementos aleatórios.
+	// Preenche o vetor com elementos aleatÃ³rios.
 	public static int[] createRandomArray(int length) {
 		int[] a = new int[length];
 		for (int i = 0; i < a.length; i++) {
